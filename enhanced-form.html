@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form and Content Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-inline: auto;
+        }
+        header, section, footer {
+            margin-bottom: 2rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: auto;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enhanced HTML5 Page with Lists, Tables, Media, and Forms</h1>
+        <p>This page demonstrates well-structured HTML5 content, semantic elements, accessibility features, and a complete HTML5 form using native validation.</p>
+    </header>
+
+    <!-- LISTS SECTION -->
+    <section>
+        <h2>Popular Web Development Technologies</h2>
+        <ul>
+            <li>HTML5 – For structuring content</li>
+            <li>CSS3 – For styling and layout</li>
+            <li>JavaScript – For interactivity</li>
+        </ul>
+
+        <h3>Steps to Create a Web Page</h3>
+        <ol>
+            <li>Plan your layout and content</li>
+            <li>Write semantic HTML5 structure</li>
+            <li>Apply styles using CSS</li>
+            <li>Add interactivity with JavaScript</li>
+            <li>Test for accessibility and responsiveness</li>
+        </ol>
+    </section>
+
+    <!-- TABLE SECTION -->
+    <section>
+        <h2>Sample Price Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price (USD)</th>
+                    <th>Delivery Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Website Design</td>
+                    <td>$300</td>
+                    <td>7 days</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>$150</td>
+                    <td>3 days</td>
+                </tr>
+                <tr>
+                    <td>Maintenance Package</td>
+                    <td>$50/month</td>
+                    <td>Ongoing</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section>
+        <h2>Media Showcase</h2>
+        <figure>
+            <img src="https://via.placeholder.com/800x300" alt="Sample Placeholder Image">
+            <figcaption>An example placeholder image.</figcaption>
+        </figure>
+
+        <figure>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Sample video demonstration.</figcaption>
+        </figure>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section>
+        <h2>Contact / Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +123456789" pattern="^\+?\d{7,15}$" required>
+            </fieldset>
+
+            <!-- Account Information -->
+            <fieldset>
+                <legend>Account Information</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="5">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required minlength="8">
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="service">Select a Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Please choose an option --</option>
+                    <option value="webdesign">Web Design</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+
+                <label>Preferred Contact Method:</label>
+                <input type="radio" id="contact-email" name="contact_method" value="email" required>
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                <label for="contact-phone">Phone</label>
+
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    Subscribe to our newsletter
+                </label>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Message:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your message here..."></textarea>
+            </fieldset>
+
+            <!-- Read-only Info -->
+            <fieldset>
+                <legend>Reference Info</legend>
+                <label for="refcode">Reference Code:</label>
+                <input type="text" id="refcode" name="refcode" value="REF12345" readonly>
+            </fieldset>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
